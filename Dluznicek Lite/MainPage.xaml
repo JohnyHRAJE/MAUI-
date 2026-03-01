@@ -20,35 +20,28 @@
             <Button Text="Přidat" Clicked="OnPridatKamarada" />
         </HorizontalStackLayout>
 
-        <CollectionView x:Name="SeznamView" HeightRequest="400">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border Margin="0,5" Padding="10" >
-                        <Grid ColumnDefinitions="2*, 1*, 1*, 1*, 1*,1*,1*">
-                            <Label Text="{Binding Jmeno}" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="0"/>
+            <CollectionView x:Name="SeznamView" HeightRequest="400">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,5" Padding="10" >
+                            <Grid ColumnDefinitions="2*, 1*, 1*, 1*, 1*,1*,1*">
+                                <Label Text="{Binding Jmeno}" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="0"/>
 
-                            <Button Text="+ 10" Clicked="OnPridat10" CommandParameter="{Binding .}" Grid.Column="1" Padding="0"/>
-                            <Label Text="{Binding Piv10}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"/>
-                            
-                            <Button Text="+ 11" Clicked="OnPridat11" CommandParameter="{Binding .}" Grid.Column="3" Padding="0"/>
-                            <Label Text="{Binding Piv11}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="4"/>
+                                <Button Text="+ 10" Clicked="OnPridat10" CommandParameter="{Binding .}" Grid.Column="1" Padding="0"/>
+                                <Label Text="{Binding Piv10}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"/>
 
-                            <Button Text="+ 12" Clicked="OnPridat12" CommandParameter="{Binding .}" Grid.Column="5" Padding="0"/>
-                            <Label Text="{Binding Piv12}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="6"/>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <Label x:Name="DyskoLabel" Text="Spropitné: 0 %" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                                <Button Text="+ 11" Clicked="OnPridat11" CommandParameter="{Binding .}" Grid.Column="3" Padding="0"/>
+                                <Label Text="{Binding Piv11}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="4"/>
 
-        <Slider x:Name="DyskoSlider" 
-                Minimum="0" Maximum="30" Value="0" 
-                ValueChanged="OnDyskoZmeneno" 
-                Margin="20,0,20,10"/>
-        <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
-
-        <Button Text="Zaplatit a rozpočítat" Clicked="OnUkoncitKliknuto" HeightRequest="80" FontSize="18" Margin="50,5,50,0"/>
+                                <Button Text="+ 12" Clicked="OnPridat12" CommandParameter="{Binding .}" Grid.Column="5" Padding="0"/>
+                                <Label Text="{Binding Piv12}" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="6"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        <!-- pridame text ktery spočíta celkovou utratu stolu pokažde co se změní cena piva nebo nekdo vypije pivo-->
+            <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
     </ScrollView>
