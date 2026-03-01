@@ -48,7 +48,7 @@
                 Margin="20,0,20,10"/>
         <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
 
-        <Button Text="Zaplatit a rozpočítat" Clicked="OnUkoncitKliknuto" HeightRequest="80" FontSize="18" Margin="50,5,50,0"/>
+        
 
     </VerticalStackLayout>
     </ScrollView>

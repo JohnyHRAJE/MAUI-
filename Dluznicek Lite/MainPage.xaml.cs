@@ -88,20 +88,5 @@ public partial class MainPage : ContentPage
 
     
 
-    private async void OnUkoncitKliknuto(object sender, EventArgs e)
-    {
-        // Zkontrolujeme, jestli máme správně zadané ceny
-        if (double.TryParse(Cena10Entry.Text, out double cena10) &&
-            double.TryParse(Cena11Entry.Text, out double cena11) &&
-            double.TryParse(Cena12Entry.Text, out double cena12))
-        {
-            double dyskoProcenta = Math.Round(DyskoSlider.Value);
-            // Přejdeme na druhou stránku a pošleme jí náš seznam lidí a ceny piv
-            await Navigation.PushAsync(new SouhrnPage(Pijaci, cena10, cena11, cena12, dyskoProcenta));
-        }
-        else
-        {
-            await DisplayAlertAsync("Chyba", "Zkontroluj zadané ceny piv!", "OK");
-        }
-    }
+   
 }
