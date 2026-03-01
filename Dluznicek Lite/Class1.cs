@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Dluznicek_Lite
 {
+    //pridejte do classu piva 11 a 12 stejne jako pivo 10
     public class Kamarad : INotifyPropertyChanged
     {
         public string Jmeno { get; set; }
@@ -22,33 +23,7 @@ namespace Dluznicek_Lite
                 }
             }
         }
-        private int _piv11;
-        public int Piv11
-            {
-            get => _piv11;
-            set
-            {
-                if (_piv11 != value)
-                {
-                    _piv11 = value;
-                    OnPropertyChanged(nameof(Piv11));
-                }
-            }
-        }
-        private int _piv12;
-        public int Piv12
-        {
-            get => _piv12;
-            set
-            {
-                if (_piv12 != value)
-                {
-
-                    _piv12 = value;
-                    OnPropertyChanged(nameof(Piv12));
-                }
-            }
-        }
+        
 
 
         public event PropertyChangedEventHandler PropertyChanged;
