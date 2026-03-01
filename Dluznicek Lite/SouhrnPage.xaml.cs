@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-namespace Dluznicek_Lite; // Zkontroluj svůj název projektu!
+namespace Dluznicek_Lite; 
 
 public partial class SouhrnPage : ContentPage
 {
@@ -8,7 +8,7 @@ public partial class SouhrnPage : ContentPage
     public ObservableCollection<PolozkaUctenky> Uctenky { get; set; } = new ObservableCollection<PolozkaUctenky>();
 
     private double zbyvaVybrat = 0;
-    // Všimni si, že jsme do závorek přidali parametry!
+    
     public SouhrnPage(ObservableCollection<Kamarad> pijaci, double cena10, double cena11, double cena12, double dyskoProcenta)
     {
         InitializeComponent();
@@ -42,51 +42,11 @@ public partial class SouhrnPage : ContentPage
         // Propojíme náš seznam s CollectionView v XAMLu
         VysledkyView.ItemsSource = Uctenky;
         zbyvaVybrat = celkemZaVsechny;
-        AktualizujZbyvaVybratLabel();
         // Zobrazíme celkový součet dole pod čarou
         CelkemVybranoLabel.Text = $"Celková útrata: {celkemZaVsechny} Kč";
     }
 
-    private void AktualizujZbyvaVybratLabel()
-    {
-        if (zbyvaVybrat > 0)
-        {
-            CelkemVybranoLabel.Text = $"Zbývá vybrat: {zbyvaVybrat} Kč";
-            CelkemVybranoLabel.TextColor = Colors.Red;
-        }
-        else
-        {
-            CelkemVybranoLabel.Text = "Vše zaplaceno! 🎉";
-            CelkemVybranoLabel.TextColor = Colors.Green;
-        }
-    }
-    private void OnZaplatilKliknuto(object sender, EventArgs e)
-    {
-        // Zjistíme, na které tlačítko se kliklo
-        var tlacitko = (Button)sender;
-
-        // Zjistíme, ke kterému kamarádovi toto tlačítko patří
-        var polozka = (PolozkaUctenky)tlacitko.CommandParameter;
-
-
-        if (!polozka.JeZaplaceno)
-        {
-            // 1. Změníme stav na zaplaceno
-            polozka.JeZaplaceno = true;
-
-            // 2. Odečteme jeho útratu z celkového dluhu
-            zbyvaVybrat -= polozka.CastkaKc;
-
-            // 3. Vizuálně upravíme tlačítko (zezelená a už nepůjde kliknout)
-            tlacitko.Text = "✔️";
-            tlacitko.BackgroundColor = Colors.LightGreen;
-            tlacitko.IsEnabled = false;
-            polozka.BarvaTextu = Colors.DarkGreen;
-
-            // 4. Přepíšeme text dole na obrazovce
-            AktualizujZbyvaVybratLabel();
-        }
-    }
+    
 }
 
 // Pomocná třída jen pro zobrazení dat na této stránce
@@ -95,18 +55,9 @@ public class PolozkaUctenky : INotifyPropertyChanged
     public string Jmeno { get; set; }
     public string Detail { get; set; }
     public double CastkaKc { get; set; }
-    public bool JeZaplaceno { get; set; }
+    
 
-    private Color _barvaTextu = Colors.DarkRed; // Výchozí barva je červená
-    public Color BarvaTextu
-    {
-        get => _barvaTextu;
-        set
-        {
-            _barvaTextu = value;
-            OnPropertyChanged(nameof(BarvaTextu)); // Řekneme UI, ať se překreslí
-        }
-    }
+    
 
     public event PropertyChangedEventHandler PropertyChanged;
     protected void OnPropertyChanged(string propertyName) =>

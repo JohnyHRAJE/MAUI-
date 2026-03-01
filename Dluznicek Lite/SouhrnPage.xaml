@@ -30,15 +30,7 @@
                                     HorizontalOptions="End" 
                                     Grid.Column="2" />
 
-                            <Button Text="Zaplatit" 
-                                    Clicked="OnZaplatilKliknuto" 
-                                    CommandParameter="{Binding .}" 
-                                    Grid.Column="3" 
-                                    Padding="5,3" 
-                                    HeightRequest="40" 
-                                    VerticalOptions="Center"
-                                    BackgroundColor="#0078D4"
-                                    CornerRadius="5"/>
+                            
                         </Grid>
                     </Border>
                 </DataTemplate>
