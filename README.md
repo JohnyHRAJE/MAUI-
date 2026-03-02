@@ -132,14 +132,16 @@ Teď se vrhneme na vytvoření CollectionView v XAMLu tedy:
 Teď už jen zkuste přidat label který ukazuje kolik nám chybý vybrat od ostatních za účet
 
 ## Řešení pro ```<Label/> ```
-
-```xaml
-<Label x:Name="CelkemVybranoLabel" 
-       FontSize="22" 
-       FontAttributes="Bold" 
-       HorizontalOptions="Center" 
-       TextColor="DarkGreen" />
-```
+<details>
+<summary>💡 Klikni sem pro zobrazení Řešení </summary>
+  ```xaml
+    
+    <Label x:Name="CelkemVybranoLabel" 
+             FontSize="22" 
+             FontAttributes="Bold" 
+             HorizontalOptions="Center" 
+             TextColor="DarkGreen" />
+  ```
 
 
   
