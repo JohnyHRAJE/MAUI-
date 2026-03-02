@@ -26,16 +26,16 @@ public partial class MainPage : ContentPage
     private void OnPridat10(object sender, EventArgs e)
     {
         var tlacitko = (Button)sender;
-        var kamarad = (Kamarad)tlacitko.CommandParameter; // Zjistíme, koho jsme zaklikli
-        kamarad.Piv10++; // Přidáme pivo
+        var kamarad = (Kamarad)tlacitko.CommandParameter; 
+        kamarad.Piv10++; 
         
     }
 
     private void OnPridat11(object sender, EventArgs e)
     {
         var tlacitko = (Button)sender;
-        var kamarad = (Kamarad)tlacitko.CommandParameter; // Zjistíme, koho jsme zaklikli
-        kamarad.Piv11++; // Přidáme pivo
+        var kamarad = (Kamarad)tlacitko.CommandParameter; 
+        kamarad.Piv11++; 
         
     }
 
@@ -46,7 +46,7 @@ public partial class MainPage : ContentPage
         kamarad.Piv12++;
         
     }
-    // Tato metoda se zavolá KDYKOLIV se změní číslo v políčku s cenou
+    
     
     
    
