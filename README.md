@@ -134,14 +134,15 @@ Teď už jen zkuste přidat label který ukazuje kolik nám chybý vybrat od ost
 ## Řešení pro ```<Label/> ```
 <details>
 <summary>💡 Klikni sem pro zobrazení Řešení </summary>
-  ```xaml
-    
+  
+  
     <Label x:Name="CelkemVybranoLabel" 
              FontSize="22" 
              FontAttributes="Bold" 
              HorizontalOptions="Center" 
              TextColor="DarkGreen" />
-  ```
+   
+
 
 
   
