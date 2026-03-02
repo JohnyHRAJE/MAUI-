@@ -7,7 +7,7 @@ public partial class SouhrnPage : ContentPage
     // Sem uložíme hotové výpočty pro zobrazení
     public ObservableCollection<PolozkaUctenky> Uctenky { get; set; } = new ObservableCollection<PolozkaUctenky>();
 
-    private double zbyvaVybrat = 0;
+    
     
     public SouhrnPage(ObservableCollection<Kamarad> pijaci, double cena10, double cena11, double cena12, double dyskoProcenta)
     {
