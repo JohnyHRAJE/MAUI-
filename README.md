@@ -6,7 +6,7 @@
 
   V MainPage.xaml udělej tlačítko které ma ```Text="Zaplatit a rozpočítat" Clicked="OnUkoncitKliknuto```
   
-## 2. ## Poté se přesuneme do MainPage.xaml.cs
+## 2. Poté se přesuneme do MainPage.xaml.cs
    
   Zde vytvoříme funkci která nás po kliknutí tlačítka pošle na další stránku:
    ```csharp
