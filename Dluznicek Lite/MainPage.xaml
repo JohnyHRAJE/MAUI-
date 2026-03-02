@@ -47,7 +47,8 @@
                 ValueChanged="OnDyskoZmeneno" 
                 Margin="20,0,20,10"/>
         <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
-
+        
+        <!-- pridej tlačítko ktere propojíš se C# tak aby nas poslalo na další obrazovku aplikace-->
         
 
     </VerticalStackLayout>

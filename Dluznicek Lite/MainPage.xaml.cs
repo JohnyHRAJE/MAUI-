@@ -84,7 +84,7 @@ public partial class MainPage : ContentPage
         }
     }
 
-    
+    //zde vytvoř funkci  která nás po kliknutí tlačítka presune na nově vytvořenou stránku SouhrnPage
 
     
 
