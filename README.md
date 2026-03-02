@@ -48,7 +48,7 @@ Dale pak musíme vytvořit funkci která po kliknutí na vytvořené tlačítko 
   <summary>💡 Řešení úlohy</summary>
   C#:
 
-  ```
+  ```csharp
     private void OnZaplatilKliknuto(object sender, EventArgs e)
   {
       // Zjistíme, na které tlačítko se kliklo
