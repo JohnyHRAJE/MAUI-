@@ -40,7 +40,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        
+            <!-- Pridej label a slider tak aby slider upravoval dýško od 0-30 % a v Lablu se psalo kolik maš % dýška přidáno -->
             <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
 
     </VerticalStackLayout>

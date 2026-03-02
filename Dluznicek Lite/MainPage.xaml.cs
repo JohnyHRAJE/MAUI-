@@ -51,9 +51,9 @@ public partial class MainPage : ContentPage
     {
         PrepocitejCelkem();
     }
+    //přidej funkci která bude upraovat text <Labelu /> na hodnotu slideru dýška
     
-    
-
+    //uprav funkci PrepocitejCelkem() tak, aby vracela celkovou cenu  i s dýškem
     private void PrepocitejCelkem()
     {
         if (double.TryParse(Cena10Entry.Text, out double cena10)&&
