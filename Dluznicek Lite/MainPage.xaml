@@ -5,7 +5,7 @@
     <VerticalStackLayout Padding="15" Spacing="8">
 
         <Label Text="🍻 Hospodský lístek 🍻" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
-        
+        <!-- bude potřeba upravit kod mezi <horizontalstacklayout> tal aby se dala počitat celkova cena utraty když se zmeni cena piva použij TextChanged="nazev"-->
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" >
             <Label Text="Cena 10°:" VerticalOptions="Center"/>
             <Entry x:Name="Cena10Entry" Text="40" Keyboard="Numeric" WidthRequest="20"/>
@@ -40,6 +40,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <!-- pridame text ktery spočíta celkovou utratu stolu pokažde co se změní cena piva nebo nekdo vypije pivo-->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

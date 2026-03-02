@@ -46,8 +46,9 @@ public partial class MainPage : ContentPage
         kamarad.Piv12++;
         
     }
-    
-    
+
+//pridej funkci ktera zavola spocitani utraty pokažde co se zmeni cena piva
+//pridej funkci pro celkovou utratu stolu 
     
    
 
