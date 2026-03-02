@@ -40,7 +40,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        <!-- pridame text ktery spočíta celkovou utratu stolu pokažde co se změní cena piva nebo nekdo vypije pivo-->
+        
             <Label x:Name="CelkemStulLabel" Text="Celkem k zaplacení: 0 Kč" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
