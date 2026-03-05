@@ -59,6 +59,11 @@ Naklonujte si tento depozitář do svého visual studia, a poté začněte praco
     }
     ```
     
+    ```
+    <TargetFramework>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFramework>
+    <TargetFramework Condition="$([MSBuild]::IsOSPlatform('Windows'))">$(TargetFramworks);net8.0-windows10.0.19041.0</TargetFramework>
+    ```
+    
 
 
 
